@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.redpill-linpro.alfresco.support-tools</groupId>
+	<artifactId>alfresco-rl-support-tools</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Alfresco Support Tools</name>
+	<inceptionYear>2015</inceptionYear>
+	<url>https://github.com/Redpill-Linpro/alfresco-rl-support-tools</url>
+	<organization>
+		<name>Redpill Linpro AB</name>
+		<url>http://www.redpill-linpro.com</url>
+	</organization>
+	<scm>
+		<developerConnection>scm:git:https://github.com/Redpill-Linpro/alfresco-rl-support-tools</developerConnection>
+		<connection>scm:git:https://github.com/Redpill-Linpro/alfresco-rl-support-tools</connection>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>mars</id>
+			<name>Marcus Svensson</name>
+			<email>mars@redpill-linpro.com</email>
+			<organization>Redpill Linpro AB</organization>
+			<roles>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>+2</timezone>
+		</developer>
+	</developers>
+	
+	<modules>
+		<module>reset-site-dashboard</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>redpill-public</id>
+			<url>https://maven.redpill-linpro.com/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+	    <repository>
+	      <id>redpill-linpro-releases</id>
+	      <url>http://maven.redpill-linpro.com/nexus/content/repositories/releases</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>redpill-linpro-snapshots</id>
+	      <url>http://maven.redpill-linpro.com/nexus/content/repositories/snapshots</url>
+	    </snapshotRepository>
+	  </distributionManagement>
+</project>

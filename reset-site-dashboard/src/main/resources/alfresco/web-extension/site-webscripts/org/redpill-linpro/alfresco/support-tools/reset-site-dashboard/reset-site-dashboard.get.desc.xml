@@ -1,0 +1,16 @@
+<webscript>
+  <shortname>Reset site dashboard</shortname>
+  <description>
+  	<![CDATA[
+  	Support Tool used to reset a site dashboard which may have been corrupted or is missing. Can also be used when sites are created programmatically and needs to be initialized in share.
+	
+	Example call to reset dashboard for SWDP project.
+	http://localhost:8081/share/service/rl/support/reset-site-dashboard?shortName=swdp&preset=site-dashboard
+	
+	]]>
+  </description>
+  <url>/rl/support/reset-site-dashboard?shortName={shortName}&amp;preset={preset}</url>
+  <family>Redpill-Linpro</family>
+  <format default="json">argument</format>
+  <authentication>admin</authentication>
+</webscript>
