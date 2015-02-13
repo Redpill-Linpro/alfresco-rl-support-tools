@@ -22,5 +22,5 @@ The error is usally identified by the following log message in Share:
 
 These issues can have one of many causes some are:
 * Failed patch in an upgrade (Community or Enterprise)
-** We have seen this several times when Community -> Enterprise upgrades have taken place
+* We have seen this several times when Community -> Enterprise upgrades have taken place
 * Renaming of a site (changing its short name/id)
