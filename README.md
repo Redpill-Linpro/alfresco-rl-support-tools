@@ -18,4 +18,7 @@ This tool is used to recreate surf-config for a site. We have seen from time to 
 
 The error is usally identified by the following log message in Share:
 
+```
 15:20:56,078 ERROR [org.alfresco.web.site] [ajp-bio-8010-exec-205] javax.servlet.ServletException: Could not resolve view with name 'site/xxx/dashboard' in servlet with name 'Spring Surf Dispatcher Servlet'
+```
+
