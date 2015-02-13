@@ -25,3 +25,12 @@ These issues can have one of many causes some are:
 * We have seen this several times when Community -> Enterprise upgrades have taken place
 * Renaming of a site (changing its short name/id)
 * Restoring a deleted site (this error comes from a failed patch or upgrade)
+
+### How to install
+* Copy the built jar file into tomcat-share/shared/lib/ and restart Share
+
+### How to use
+* Note the site shortName
+* Note the preset used for the site (the st:sitePreset property on the site node). Default is "site-dashboard" for Collaboration Sites
+* Call the url 	http://localhost:8081/share/service/rl/support/reset-site-dashboard?shortName=<SITE_SHORTNAME>&preset=site-dashboard
+
