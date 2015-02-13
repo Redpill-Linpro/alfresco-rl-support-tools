@@ -33,4 +33,6 @@ These issues can have one of many causes some are:
 * Note the site shortName
 * Note the preset used for the site (the st:sitePreset property on the site node). Default is "site-dashboard" for Collaboration Sites
 * Call the url 	http://localhost:8081/share/service/rl/support/reset-site-dashboard?shortName=\<SITE\_SHORTNAME>&preset=\<SITE\_PRESET>
+* The site dashboard should now have been recreated
+* If you still get an error visit http://localhost:8081/share/service/console and click the button "Refresh objects registry"
 
