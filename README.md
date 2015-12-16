@@ -36,3 +36,86 @@ These issues can have one of many causes some are:
 * The site dashboard should now have been recreated
 * If you still get an error visit http://localhost:8081/share/service/console and click the button "Refresh objects registry"
 
+### Use with JavaScript console
+
+#### FTL
+```
+<b>Log output:</b>
+<#list  result as log>
+ ${log} <br/>
+ <img src="${log}" width="1" height="1"/> <br/>
+</#list>
+```
+
+#### One specific site
+
+```
+
+result = new Array();
+var site = search.selectNodes("/app:company_home/st:sites/cm:shortName")[0];
+
+
+	if (site.name!="surf-config") {
+		var surf_config = site.childByNamePath("surf-config");		
+		
+		if (surf_config) {
+			logger.log("Removing site configuration for "+site.name);
+			surf_config.remove();			
+		}
+	}
+
+
+
+	if (site.name!="surf-config") {
+
+		var req = "http://localhost:8081/share/service/rl/patch/reset-dashboard?url="+site.name+"&preset=site-dashboard";
+		logger.log(req);
+		result.push(req);
+		//logger.log("Making request to "+req);
+
+		//remote.call("http://localhost:8081/share/service/patch/reset-dashboard?url="+site.name+"&preset=site-dashboard");
+	}
+
+
+
+model.result = result;
+```
+
+#### All sites
+
+```
+var sites = search.selectNodes("/app:company_home/st:sites")[0].children;
+var result = new Array();
+
+for (var i=0;i<sites.length;i++) {
+
+	var site = sites[i];
+
+	if (site.name!="surf-config") {
+		var surf_config = site.childByNamePath("surf-config");		
+		
+		if (surf_config) {
+			logger.log("Removing site configuration for "+site.name);
+			surf_config.remove();			
+		}
+	}
+}
+
+
+
+for (var i=0;i<sites.length;i++) {
+
+	var site = sites[i];
+
+	if (site.name!="surf-config") {
+
+		var req = "http://localhost:8081/share/service/rl/patch/reset-dashboard?url="+site.name+"&preset=site-dashboard";
+		logger.log(req);
+		result.push(req);
+		//logger.log("Making request to "+req);
+
+		//remote.call("http://localhost:8081/share/service/patch/reset-dashboard?url="+site.name+"&preset=site-dashboard");
+	}
+
+}
+```
